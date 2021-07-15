@@ -15,9 +15,9 @@ app.engine('hbs', hbs({
 app.set('view engine', 'handlebars')
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
+app.use(express.static(__dirname + '/public'));
 
 // routes
-app.use('/email', require('./routes/email.route'))
 app.get('/', (req, res) => {
   res.render('home.hbs')
 })
