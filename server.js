@@ -1,6 +1,5 @@
 const express = require('express')
 const hbs = require('express-handlebars')
-require('dotenv').config()
 const port = process.env.port || 3000
 
 const app = express()
